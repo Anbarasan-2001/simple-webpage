@@ -1,0 +1,1 @@
+USER_COLLECTION = "user_credentials"
