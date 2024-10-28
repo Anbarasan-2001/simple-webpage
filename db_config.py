@@ -19,11 +19,11 @@ def get_database():
     
     MY_MONGO_URI = get_mongo_uri()
     
-    client = MongoClient(MY_MONGO_URI)
+    client       = MongoClient(MY_MONGO_URI)
     
-    DB_NAME = os.environ['DB_NAME']
+    DB_NAME      = os.environ['DB_NAME']
     
-    database = client[DB_NAME]
+    database     = client[DB_NAME]
     
     return database
 
