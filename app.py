@@ -25,10 +25,8 @@ def register():
         
         existing_user = collection.find_one({"email": email})
         
-        session['email'] = email
-        
         if existing_user:
-            flash('Username already exists. Please choose another one.', 'danger')
+            flash('Username already exists. Please choose another one.', 'danger' )
             return redirect(url_for('register'))
         
         hashed_password = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
@@ -51,6 +49,7 @@ def register():
         return redirect(url_for('login'))
 
     return render_template('register.html')
+
 
 
 @app.route('/', methods=['POST','GET'])
